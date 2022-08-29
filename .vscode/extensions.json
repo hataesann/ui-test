@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "coenraads.bracket-pair-colorizer",
+    "pkief.material-icon-theme",
+    "bradlc.vscode-tailwindcss",
+    "austenc.tailwind-docs",
+    "csstools.postcss"
+  ]
+}

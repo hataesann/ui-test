@@ -27,7 +27,11 @@ export const Button = ({ type, label, onClick }: ButtonProps) => {
       break;
     case 'submit':
       buttonClassName = className.submit;
-      break;
+      return (
+        <button type='submit' className={buttonClassName} onClick={onClick}>
+          {label}
+        </button>
+      );
   }
   return (
     <button className={buttonClassName} onClick={onClick}>

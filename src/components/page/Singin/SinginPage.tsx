@@ -1,11 +1,11 @@
 import { HeaderEcosystem } from '../../ecosystem/HeaderEcosystem';
-import { LoginFormEcosystem } from '../../ecosystem/LoginFormEcosystem';
+import { SinginFormEcosystem } from '../../ecosystem/SinginFormEcosystem';
 
 export const SinginPage = () => {
   return (
     <>
       <HeaderEcosystem isLogin={false} />
-      <LoginFormEcosystem title='新規登録' submitText='登録' />
+      <SinginFormEcosystem title='新規登録' submitText='登録' />
     </>
   );
 };

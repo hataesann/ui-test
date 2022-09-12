@@ -6,7 +6,11 @@ export interface AuthType {
 }
 
 export const Login = async (data: AuthType) => {
-  await apiClient.post('auth/login', data);
+  await apiClient.post('auth/login', data, { withCredentials: true });
+};
+
+export const Singin = async (data: AuthType) => {
+  await apiClient.put('auth/singin', data);
 };
 
 /* export const signUp = async (data: AuthType) => {

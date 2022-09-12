@@ -23,12 +23,13 @@ export const LoginFormEcosystem: FC<LoginProps> = ({ title, submitText }) => {
     console.log(data);
     await Login(data);
     try {
-      navigate('/logoutPage');
+      navigate('/homePage');
     } catch (err) {
       const errorMsg = apiErrorMessage(err);
       console.error(errorMsg);
     }
   };
+
   return (
     <LoginForm
       title={title}

@@ -9,3 +9,9 @@ export default {
 const Template: ComponentStory<typeof SimpleInput> = (args) => <SimpleInput {...args} />;
 
 export const Login = Template.bind({});
+Login.args = {
+  id: 'login',
+  name: 'login',
+  type: 'text',
+  label: 'ログイン',
+};

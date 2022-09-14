@@ -13,12 +13,6 @@ Login.args = {
   type: 'login',
   label: 'ログイン',
 };
-Login.parameters = {
-  design: {
-    type: '',
-    url: '',
-  },
-};
 
 export const Logout = Template.bind({});
 Logout.args = {

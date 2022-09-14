@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 import { FC } from 'react';
 import { AuthType, Singin } from './api/auth.api';
-import { useForm } from 'react-hook-form';
 import { apiErrorMessage } from './api/apiClient';
-import { SinginForm } from '../organism/SinginForm/SinginForm';
+import { LoginForm } from '../organism/LoginForm/LoginForm';
+import { useForm } from 'react-hook-form';
 
 export interface SinginProps {
   title: string;
@@ -31,7 +31,7 @@ export const SinginFormEcosystem: FC<SinginProps> = ({ title, submitText }) => {
   };
   return (
     <div>
-      <SinginForm
+      <LoginForm
         title={title}
         submitText={submitText}
         onSubmit={handleSubmit(onSubmit)}

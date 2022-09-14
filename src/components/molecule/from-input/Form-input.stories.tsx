@@ -8,4 +8,10 @@ export default {
 
 const Template: ComponentStory<typeof FormInput> = (args) => <FormInput {...args} />;
 
-export const Id = Template.bind({});
+export const Test = Template.bind({});
+Test.args = {
+  id: 'test',
+  name: 'test',
+  type: 'text',
+  label: 'テスト',
+};

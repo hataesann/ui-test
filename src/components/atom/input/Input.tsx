@@ -1,6 +1,6 @@
 import { FC, forwardRef, ComponentPropsWithoutRef } from 'react';
 
-export type InputType = 'text' | 'email' | 'password';
+export type InputType = 'text' | 'password';
 
 type InputProps = ComponentPropsWithoutRef<'input'>;
 

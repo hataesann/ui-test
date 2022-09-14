@@ -10,10 +10,18 @@ interface LoginProps {
   onSubmit: () => void;
   register: UseFormRegister<LoginFormFields>;
   formState: FormState<LoginFormFields>;
+  errorText?: string;
 }
 
-export const LoginForm: FC<LoginProps> = ({ title, submitText, onSubmit, register, formState: { errors } }) => {
-  const [isPassword, setIsPassword] = useState<boolean>(false); //password表示/非表示
+export const LoginForm: FC<LoginProps> = ({
+  title,
+  submitText,
+  onSubmit,
+  register,
+  formState: { errors },
+  errorText,
+}) => {
+  const [isPassword, setIsPassword] = useState<boolean>(false);
 
   return (
     <div className='h-screen bg-blue-50'>
@@ -51,6 +59,7 @@ export const LoginForm: FC<LoginProps> = ({ title, submitText, onSubmit, registe
             <input type='checkbox' name='isPassword' onClick={() => setIsPassword((pre) => !pre)} />
             &nbsp; パスワードを表示する
           </div>
+          {errorText != null ? <p className='absolute bottom-24 left-16 text-red-800'>{errorText}</p> : <></>}
           <div className='absolute left-28 bottom-7'>
             <Button type='submit' label={submitText} onClick={onSubmit} />
           </div>

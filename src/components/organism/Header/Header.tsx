@@ -1,13 +1,16 @@
+import { useContext } from 'react';
+import { UseNameContext } from '../../../App';
 import { Button } from '../../atom/button/Button';
 
 interface HeaderProps {
-  user?: string;
   isLogin: boolean;
   onClickLogin: () => void;
   OnClickSingin: () => void;
 }
 
-export const Header = ({ user, isLogin, onClickLogin, OnClickSingin }: HeaderProps) => {
+export const Header = ({ isLogin, onClickLogin, OnClickSingin }: HeaderProps) => {
+  const { userName } = useContext(UseNameContext);
+
   return (
     <div>
       <div className=' flex h-20 min-w-max border-b-4 bg-blue-50'>
@@ -16,7 +19,7 @@ export const Header = ({ user, isLogin, onClickLogin, OnClickSingin }: HeaderPro
         {isLogin ? (
           <div className='flex'>
             <span className='my-5 rounded-2xl px-3 py-2 font-bold'>
-              こんにちは、<b>{user}</b>さん
+              こんにちは、<b>{userName}</b>さん
             </span>
             <Button type='logout' label='ログアウト' onClick={onClickLogin} />
           </div>

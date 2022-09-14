@@ -15,6 +15,5 @@ Logouted.args = {
 
 export const Logined = Template.bind({});
 Logined.args = {
-  user: 'piko',
   isLogin: true,
 };

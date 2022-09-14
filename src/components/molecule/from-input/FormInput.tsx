@@ -24,6 +24,7 @@ export const FormInput = <TFormValues extends FieldValues>({
 }: FormInputProps<TFormValues>): JSX.Element => {
   const errorMessages = get(errors, name);
   const hasError = !!(errors && errorMessages);
+
   return (
     <div className={divClassName} aria-live='polite'>
       <SimpleInput

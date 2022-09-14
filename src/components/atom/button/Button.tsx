@@ -33,6 +33,7 @@ export const Button = ({ type, label, onClick }: ButtonProps) => {
         </button>
       );
   }
+
   return (
     <button className={buttonClassName} onClick={onClick}>
       {label}

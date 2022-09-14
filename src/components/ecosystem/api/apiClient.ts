@@ -6,7 +6,6 @@ export const apiClient = axios.create({
 
 export const apiErrorMessage = (e: unknown) => {
   if (axios.isAxiosError(e)) {
-    console.log(e);
     return e.message;
   }
   return 'Error';

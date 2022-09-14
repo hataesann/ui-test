@@ -10,5 +10,5 @@ export const Login = async (data: AuthType) => {
 };
 
 export const Singin = async (data: AuthType) => {
-  await apiClient.put('auth/singin', data);
+  await apiClient.post('auth/singin', data, { withCredentials: true });
 };
